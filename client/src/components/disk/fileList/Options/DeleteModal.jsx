@@ -15,9 +15,11 @@ export default function DeleteModal(props) {
 
   return (
     <div className={s.modalDelete}>
-      <FormattedMessage id='delete_file_ask'/>
-      <Button onClick={(e) => deleteFunc(e)}><FormattedMessage id='yes'/> </Button>
-      <Button onClick={() => setDeleteModal(false) }><FormattedMessage id='no'/> </Button>
+      <div className={s.deleteContent}>
+        <FormattedMessage id='delete_file_ask'/>
+        <Button onClick={(e) => deleteFunc(e)}><FormattedMessage id='yes'/> </Button>
+        <Button onClick={() => setDeleteModal(false) }><FormattedMessage id='no'/> </Button>
+      </div>
     </div>
   )
 }

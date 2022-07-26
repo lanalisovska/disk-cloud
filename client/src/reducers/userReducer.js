@@ -25,7 +25,7 @@ export default function userReducer(state = defaultState, action) {
 }
 
 
-export const setUser = user => ({type: SET_USER, payload: user})
+export const setUser = (user) => ({type: SET_USER, payload: user})
 export const logout = () => ({type: LOGOUT})
 export const setError = (error) => ({type: SET_ERROR, payload: error})
 export const setSuccessInfo = (success_info) => ({type: SET_ERROR, payload: success_info})

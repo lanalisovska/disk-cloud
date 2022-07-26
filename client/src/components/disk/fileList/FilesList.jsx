@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import File from './file/File'
 import './fileList.scss'
 import {TransitionGroup, CSSTransition} from 'react-transition-group'
+import { FormattedMessage } from 'react-intl'
 
 export default function FilesList() {
     
@@ -24,9 +25,9 @@ export default function FilesList() {
     return (
       <div className='filelist'>
         <div className="filelist__header">
-          <div className="filelist__name">Название</div>
-          <div className="filelist__date">Дата</div>
-          <div className="filelist__size">Размер</div>
+          <div className="filelist__name"><FormattedMessage id='name'/></div>
+          <div className="filelist__date"><FormattedMessage id='date'/></div>
+          <div className="filelist__size"><FormattedMessage id='size'/></div>
         </div>
         <TransitionGroup>
           {files.map(file => 

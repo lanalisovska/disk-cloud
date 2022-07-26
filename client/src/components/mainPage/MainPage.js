@@ -11,7 +11,7 @@ export default function MainPage() {
       <div className='text1'>Welcome to my pet project!</div>
       <div className='text2'>My name is Lana. I am a junior-frontend-developer</div>
       <div className='text2'>You can start viewing the functionality of the project here : 
-        <NavLink to='/login'><Link> /disk</Link></NavLink>
+        <NavLink to='/login'>/disk</NavLink>
       </div>
       <div className='text3'>
         <p>Also, click here and see my resume :

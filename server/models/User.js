@@ -6,7 +6,9 @@ const User = new Schema({
     diskSpace: {type: Number, default: 1024**3**10},
     usedSpace: {type: Number, default: 0},
     avatar: {type: String},
-    files: [{type: ObjectId, ref: 'File'}]
+    files: [{type: ObjectId, ref: 'File'}], 
+    name: {type: String, required: true},
+    lastName: {type: String, required: true}
 
 })
 

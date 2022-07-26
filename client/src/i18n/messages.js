@@ -21,9 +21,9 @@ export const messages = {
     yes: 'Yes', 
     no: 'No',
     //nore info about file 
-    date: 'Date:',
-    name: 'Name:',
-    size: 'Size:'
+    date: 'Date',
+    name: 'Name',
+    size: 'Size'
   }, 
   [LOCALES.UKRAINIAN]: {
     registration: "Реєстрація",
@@ -45,8 +45,8 @@ export const messages = {
     yes: 'Так',
     no: 'Ні',
     //nore info about file 
-    date: 'Дата:',
-    name: `Ім'я:`, 
-    size: 'Розмір:'
+    date: 'Дата',
+    name: `Ім'я`, 
+    size: 'Розмір'
   }
 }

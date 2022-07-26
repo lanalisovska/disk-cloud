@@ -6,7 +6,7 @@ import Input from '@mui/material/Input';
 
 
 const InputComponent = ({placeholder, type, value, setValue}) => {
-  console.log(value)
+
   return (
     <Input onChange={(event)=> setValue(event)}
       value={value}

@@ -12,26 +12,29 @@ const File = require('../models/File')
 router.post('/registration' , 
 [
     check('email', 'Uncorrect email').trim().isEmail(),
-    check('password', 'Password mast be longer than 3 and shorter than 12').isLength({min: 3, max: 12})
+    check('password', 'Password mast be longer than 3 and shorter than 12').isLength({min: 3, max: 12}),
+    check('name', 'Name mast be longer that 3').isLength({min: 1}),
+    check('lastName', 'Last name mast be longer that 3').isLength({min: 1})
 ],
 async(req, res) => {
    try{
      
       const errors = validationResult(req)
       if(!errors.isEmpty()){
-          return res.status(400).json({message: 'Uncorrect request', errors})
+          return res.status(400).json({errors})
       }
-       const {email, password} = req.body
+       const {email, password, name, lastName} = req.body
        const candidate = await User.findOne({email})
 
        if(candidate){
            return res.json({message: `User with email ${email} already exist`})
        }
        const hashPassword = await bcrypt.hash(password, 8) 
-       const user = new User({email, password: hashPassword})
+       const user = new User({email, password: hashPassword, name, lastName})
        await user.save()
        await fileService.createDir(req, new File({user: user.id, name: ''}))
-        res.status(400).json({message: 'User was created'})
+        res.json({message: 'User was created'})
+        
    }
    catch(e){
       
@@ -62,7 +65,9 @@ router.post('/login',
                     email: user.email,
                     diskSpace: user.diskSpace,
                     usedSpace: user.usedSpace,
-                    avatar: user.avatar
+                    avatar: user.avatar, 
+                    name: user.name, 
+                    lastName: user.lastName
                 }
             })
         } catch (e) {
@@ -82,7 +87,9 @@ router.get('/auth', authMiddleware,
                     email: user.email,
                     diskSpace: user.diskSpace,
                     usedSpace: user.usedSpace,
-                    avatar: user.avatar
+                    avatar: user.avatar,
+                    name: user.name, 
+                    lastName: user.lastName
                 }
             })
        }

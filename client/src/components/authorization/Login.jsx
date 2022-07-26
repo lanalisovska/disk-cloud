@@ -13,10 +13,6 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
   const error = useSelector(state => state.user.error)
-  
-
-  console.log(error)
-
   return (
     <>
       <Paper className={s.paper}   style={{ padding: 30, background:'#bed3df',width:'500px', margin: '100px 0 10px 0' }}>
