@@ -1,0 +1,60 @@
+.modal {
+    width: 150px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(179, 135, 87);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+}
+
+.modalDelete {
+    width: 150px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: ivory;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.modalDelete button {
+    height: 25px;
+}
+
+.modalMoreInfo {
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  max-width: 400px;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: ivory;
+}
+
+.name {
+    width: 180px;
+    height: auto;
+    word-wrap: break-word;
+    margin: 3px 0;
+   
+    
+}
+
+    
+.group_btn{
+    align-items: flex-start;
+}
+.modal button {
+    height: 20px;
+    margin: 3px 0;
+    padding: 2px;
+
+}

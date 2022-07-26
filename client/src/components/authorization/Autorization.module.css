@@ -1,0 +1,27 @@
+.paper {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  align-items: center;
+  background-color:#bed3df;
+  border-radius: 20px;
+  padding: 30px;
+  align-self: center;
+  margin-top: 100px;
+  
+}
+
+.paper  a {
+   color: #1F5673;
+   margin: 5px 0;
+}
+
+.paper button {
+  background-color: #1F5673;
+  border-radius: 2px;
+  
+  color: #D4A373;
+  padding: 10px 20px;
+  margin: 10px 0;
+  width: auto;
+}

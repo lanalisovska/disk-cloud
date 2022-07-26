@@ -1,0 +1,38 @@
+
+$background-color: #faedcd;
+$font-color: #D4A373;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.wrapp {
+
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    flex-direction: column;
+    width: 1400px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background-color;
+
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-color;
+  color: $font-color;
+}
+
+#root {
+  width: 100%;
+}
