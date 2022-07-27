@@ -45,11 +45,11 @@
 
 
 
-.resume-show {
+.resume__show {
     animation: showY 0.8s forwards;
 }
 
-.resume-hide{
+.resume__hide{
   animation: showY .8s reverse;
 }
 
@@ -88,20 +88,6 @@
 .text3 {
     animation: showY 1.0s forwards;
 }
-
-/* 
-@keyframes show-loader {
-    0% {
-      opacity: 0;
-      transform: translateY(-400px);
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-     transform: translateY(0);
-    }
- } */
 
 
 @keyframes showX {

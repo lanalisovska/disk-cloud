@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { getFiles, uploadFile } from '../../actions/file'
 import { setCurrentDir, setPopupDisplay, setViewAction } from '../../reducers/fileReducer'
 import Uploader from '../Uploader/Uploader'
-import './files.scss'
+import  s from './Files.module.css'
 import Popup from './PopupAddFalder'
 import Loader from '../../utils/Loader /Loader'
 import { Button } from '@mui/material'
@@ -62,25 +62,25 @@ export default function Disk() {
     return  <Loader/>
   }
   return ( !dragEnter ?
-    <div className="disk" onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
-      <div className="disk__btns">
-        <Button  disabled={!currentDir}  className={currentDir? `disk__back` :`disk__back disabled`} onClick={() => backClickHandler()}/>
+    <div className={s.disk} onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
+      <div className={s.disk__btns}>
+        <Button  disabled={!currentDir}  className={s.currentDir? `disk__back` :`disk__back disabled`} onClick={() => backClickHandler()}/>
        
-        <button className="disk__create" onClick={() => createDirHeandler()}>Создать папку</button>
-        <div className="disk__upload">
-          <label htmlFor="disk__upload-input" className="disk__upload-label">Загрузить файл</label>
-          <input  onChange={(event) => fileUploadHandler(event)} multiple={true}  type="file" id="disk__upload-input" className="disk__upload-input"/>
+        <button className={s.disk__create} onClick={() => createDirHeandler()}>Создать папку</button>
+        <div className={s.disk__upload}>
+          <label htmlFor="disk__upload__input" className={s.disk__upload__label}>Загрузить файл</label>
+          <input  onChange={(event) => fileUploadHandler(event)} multiple={true}  type="file" id="disk__upload__input" className={s.disk__upload__input}/>
         </div>
      
-        <select value={sort}onChange={(e) => setSort(e.target.value)} className="disk__select">
+        <select value={sort}onChange={(e) => setSort(e.target.value)} className={s.disk__select}>
           <option  disabled >sort by</option>
           <option value='name'>По імені</option>
           <option value='type'>По типу</option>
           <option value='date'>По даті </option>
           <option value='size'>По розміру</option>
         </select>
-        <button className='disk__list' onClick={() => setViewHandler('list')}/>
-        <button className='disk__plate' onClick={() => setViewHandler('plate')}/>
+        <button className={s.disk__list} onClick={() => setViewHandler('list')}/>
+        <button className={s.disk__plate} onClick={() => setViewHandler('plate')}/>
       </div>
     
       <FilesList/>
@@ -88,7 +88,7 @@ export default function Disk() {
       <Uploader />
     </div>
     : 
-    <div className="drop-area" onDrop={dropHandler} onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
+    <div className={s.drop__area} onDrop={dropHandler} onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
          Перемістіть файли сюди 
     </div>
   )

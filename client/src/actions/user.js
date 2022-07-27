@@ -13,15 +13,9 @@ export const registration = (email, password, name, lastName) => {
           name, 
           lastName
         })
-      dispatch(setError(response.data.errors))
-    
-      
-    }
+      dispatch(setError(response.data.errors))}
     catch(e){
-      
       dispatch(setError(e?.response?.data?.message))
-     
-     
     }
   }
 }
@@ -35,16 +29,10 @@ export const login = (email, password) => {
       })
       dispatch(setError(''))
       dispatch(setUser(response.data.user))
-      localStorage.setItem('token', response.data.token)
-     
-    }
-    
+      localStorage.setItem('token', response.data.token)}
     catch(e){
       dispatch(setError(e?.response?.data?.message))
-     
-       
-    }
-  }
+    }}
 }
 
 
@@ -58,13 +46,8 @@ export const auth = () => {
       localStorage.setItem('token', response.data.token)
     }
     catch(e){
-      // alert(e?.response?.data?.message)
-      // console.log(e)
       localStorage.removeItem('token')
-    }
-
-  }
-
+    }}
 }
 
 export const uploadAvatar = (file) => {
@@ -78,7 +61,6 @@ export const uploadAvatar = (file) => {
       dispatch(setUser(response.data))
     }
     catch(e){
-      // alert(e?.response?.data?.message)
       console.log(e)
     }
   }
@@ -87,7 +69,6 @@ export const uploadAvatar = (file) => {
 export const deleteAvatar = () => {
   return async dispatch => {
     try {
-
       const response = await axios.delete(`${API_URL}api/files/avatar`, 
         {headers: {Authorization: `Bearer ${localStorage.getItem('token')}`}}
       )

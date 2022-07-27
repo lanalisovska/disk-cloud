@@ -38,10 +38,7 @@ async(req, res) => {
    }
    catch(e){
       
-      res.send({message: 'Server error'})
-   }
-
-
+      res.send({message: 'Server error'})}
 })
 
 router.post('/login', 
@@ -99,10 +96,6 @@ router.get('/auth', authMiddleware,
        }
    }
 )
-
-
-
-
 
 
 module.exports = router

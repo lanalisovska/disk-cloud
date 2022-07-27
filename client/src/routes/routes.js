@@ -11,12 +11,10 @@ export const RouteNames = {
   DISK: '/disk',
   REGISTRATION: '/registration'
 }
-
 export const publicRoutes  = [
   {path: RouteNames.LOGIN, exact: true, component: Login}, 
   {path: RouteNames.REGISTRATION, exact: true, component: Registartion}
 ]
-
 
 export const privateRoutes  = [
   {path: RouteNames.MAIN, exact: true, component: MainPage},

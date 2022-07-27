@@ -1,16 +1,12 @@
-
 .disk {
     margin-top: 20px;
     width: 100%;
-
   }
-
 .disk__btns {
     display: flex;
     align-items: center;
     height: 60px;
-
-  }
+}
 .disk__create {
     margin:0  10px;
     background-color: #1F5673;
@@ -28,10 +24,8 @@
 
 .disk__back {
   background-image: url('../../assets/images/back2.svg');
- 
   outline: none;
   cursor: pointer;
-  // background-color: inherit;
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -62,19 +56,19 @@
 .disk__plate:hover{
   background-image: url("../../assets/images/plate hover.svg");;
 }
-.disk__upload-input {
+.disk__upload__input {
     display: none;
     border-radius: 5px;
   
   }
-.disk__upload-label {
+.disk__upload__label {
     border: 1px dashed  #1F5673;
     padding:  10px;
     cursor: pointer;
    
     border-radius: 5px;
 }
-.drop-area {
+.drop__area {
   width: 100%;
   height: calc(100vh - 50px - 40px);
   margin: 20px;
@@ -84,8 +78,7 @@
   align-items: center;
   font-size: 40px;
 }
-
-//popup add falder
+/* add folder popup */
 .popup {
   width: 100%;
   height: 100vh;

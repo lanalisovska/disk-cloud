@@ -2,7 +2,7 @@ import { any} from 'prop-types';
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { removeUploadFile } from '../../reducers/uploadReducer';
-import './uploader.scss';
+import s from './Uploader.module.css';
 
 
 
@@ -11,14 +11,14 @@ export default function UploadFile({file}) {
   const dispatch = useDispatch()
 
   return (
-    <div className="upload-file">
-      <div className="upload-file__header">
-        <div className="upload-file__name">{file.name}</div>
-        <button className="upload-file__remove" onClick={() => dispatch(removeUploadFile(file.id))}>X</button>
+    <div className={s.upload__file}>
+      <div className={s.upload__file__header}>
+        <div className={s.upload__file__name}>{file.name}</div>
+        <button className={s.upload__file__remove} onClick={() => dispatch(removeUploadFile(file.id))}>X</button>
       </div>
-      <div className="upload-file__progress-bar">
-        <div className="upload-file__upload-bar" style={{width: file.progress + "%"}}/>
-        <div className="upload-file__percent">{file.progress}%</div>
+      <div className={s.upload__file__progress__bar}>
+        <div className={s.upload__file__upload__bar} style={{width: file.progress + "%"}}/>
+        <div className={s.upload__file__percen}>{file.progress}%</div>
       </div>
     </div>
   )

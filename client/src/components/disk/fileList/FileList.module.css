@@ -17,7 +17,7 @@
     justify-self: center;
 }
 
-.file-enter-active {
+.file__enter__active {
    animation: file-enter 500ms forwards;
 } 
 

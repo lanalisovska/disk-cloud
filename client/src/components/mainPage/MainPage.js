@@ -2,18 +2,18 @@ import React, { useState } from 'react'
 import {CSSTransition} from 'react-transition-group'
 import { Button, Link } from '@mui/material'
 import { NavLink } from 'react-router-dom'
-import './MainPage.css'
+import  s from './MainPage.module.css'
 
 export default function MainPage() {
   const [visibleCV, setVisibleCV] = useState(false)
   return (
-    <div className='wrapper'>
-      <div className='text1'>Welcome to my pet project!</div>
-      <div className='text2'>My name is Lana. I am a junior-frontend-developer</div>
-      <div className='text2'>You can start viewing the functionality of the project here : 
+    <div className={s.wrapper}>
+      <div className={s.text1}>Welcome to my pet project!</div>
+      <div className={s.text2}>My name is Lana. I am a junior-frontend-developer</div>
+      <div className={s.text2}>You can start viewing the functionality of the project here : 
         <NavLink to='/login'>/disk</NavLink>
       </div>
-      <div className='text3'>
+      <div className={s.text3}>
         <p>Also, click here and see my resume :
           <Button
             onClick={() => {visibleCV ?setVisibleCV(false) : setVisibleCV(true)}}>
@@ -29,7 +29,7 @@ export default function MainPage() {
         }}
         mountOnEnter
         unmountOnExit>
-        <div className='resume'>
+        <div className={s.resume}>
           <h2>Personal skills </h2>
           <div>
             <ol>

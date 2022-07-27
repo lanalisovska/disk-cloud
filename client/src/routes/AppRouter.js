@@ -3,10 +3,7 @@ import { useSelector } from 'react-redux'
 import { Redirect, Route, Switch} from 'react-router-dom'
 import { privateRoutes, publicRoutes, RouteNames } from './routes'
 
-
-
 const  AppRouter = () => {
- 
   const isAuth = useSelector(state => state.user.isAuth)
   return (
     isAuth
