@@ -30,7 +30,6 @@ export default function Profile() {
         </label>
       </div>
       <div className={s.info_user}>
-        <div>Name: </div>
         <div>Your email: {user.email}</div>
         <div>User name: {user.name} {user.lastName}</div>
       </div>

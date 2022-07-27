@@ -3,6 +3,8 @@
     width: 100%;
     padding: 50px;
     margin: 0;
+    font-family: inherit;
+  
 }
 .resume {
     background-color: ivory;

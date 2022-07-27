@@ -4,12 +4,10 @@
     flex-direction: row;
     background-color:#1F5673;
     width: 100%;
-
-     
     align-items: center;
     justify-content: center;
     font-size: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: inherit;
 }
 
 .input {
@@ -43,7 +41,10 @@
   font-weight: 600;
   font-size: 15px;
 }
-
+.avatar {
+  margin: 0 10px;
+  border:  1px gray solid;
+}
 .container a {
   text-decoration: none;
   font-size: 20px;

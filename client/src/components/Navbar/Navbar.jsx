@@ -69,7 +69,7 @@ const Navbar = (props) =>  {
             </NavLink>
 
             <NavLink to={RouteNames.PROFILE}>
-              <Avatar src={avatar} alt='avatar'/>
+              <Avatar className={s.avatar} src={avatar} alt='avatar'/>
             </NavLink>
           </>
           :<>
